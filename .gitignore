@@ -1,2 +1,3 @@
-flaskApp/venv
-flaskApp/app/__pycache__
+venv/
+__pycache__/
+.vscode/

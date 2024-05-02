@@ -1,10 +1,10 @@
 import redis
-from flask import current_app
+import os
 
 def get_redis_connection():
-    redis_host = current_app.config['REDIS_HOST']
-    redis_port = current_app.config['REDIS_PORT']
-    redis_db = current_app.config['REDIS_DB']
+    redis_host = os.getenv('REDIS_HOST')
+    redis_port = int(os.getenv('REDIS_PORT'))
+    redis_db = int(os.getenv('REDIS_DB'))
     
     r = redis.Redis(host=redis_host, port=redis_port, db=redis_db)
     return r
