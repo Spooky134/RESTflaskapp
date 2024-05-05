@@ -8,7 +8,7 @@ load_dotenv(dotenv_path)
 
 @pytest.fixture(scope="session")
 def client():
-    app = app_init(testing=True)
+    app = app_init()
     with app.test_client() as client:
         with app.app_context():
             yield client

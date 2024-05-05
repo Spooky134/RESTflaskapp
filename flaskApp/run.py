@@ -11,4 +11,4 @@ app = app_init()
 if __name__ == '__main__':
     app.run(debug=os.getenv('DEBUG'),
             host=os.getenv('HOST'),
-            port=app.config('PORT'))
+            port=os.getenv('PORT'))
